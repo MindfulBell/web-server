@@ -1,5 +1,6 @@
 import express from 'express';
-import middleware from './middleware'
+import middleware from './middleware';
+import favicon from 'serve-favicon';
 let app = express();
 let PORT = process.env.PORT || 3000;
 
