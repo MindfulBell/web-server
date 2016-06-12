@@ -3,8 +3,6 @@ import middleware from './middleware'
 let app = express();
 const PORT = 3000
 
-
-
 app.use(middleware.logger);
 
 app.get('/about', middleware.requireAuthentication, function(req, res){
