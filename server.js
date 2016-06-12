@@ -1,7 +1,7 @@
 import express from 'express';
 import middleware from './middleware'
 let app = express();
-const PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 3000;
 
 app.use(middleware.logger);
 
