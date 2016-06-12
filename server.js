@@ -1,8 +1,8 @@
-import express from 'express';
-import middleware from './middleware';
-import favicon from 'serve-favicon';
-let app = express();
-let PORT = process.env.PORT || 3000;
+var express = require('express');
+var middleware = require('./middleware');
+var favicon = require('serve-favicon');
+var app = express();
+var PORT = process.env.PORT || 3000;
 
 app.use(middleware.logger);
 
@@ -15,6 +15,6 @@ app.use(express.static(__dirname + '/public')) //neato, this lets us access ANYT
 app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.listen(PORT, function(){
-	console.log(`Server listening on port ${PORT}!`)
+	console.log('Server listening on port ' + PORT)
 })
 
